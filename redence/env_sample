@@ -1,0 +1,12 @@
+# Local adapter server started with python -m redence.serve_models
+REDENCE_MODEL_HOST=http://127.0.0.1:11435
+REDENCE_INVESTIGATOR_MODEL=investigator
+REDENCE_DECIDER_MODEL=decider
+
+# Browser tools
+PLAYWRIGHT_HEADLESS=true
+PLAYWRIGHT_STEALTH=true
+# Empty selects bundled Chromium; set chrome to use installed Google Chrome.
+PLAYWRIGHT_CHANNEL=
+REDENCE_CAPTCHA_MODE=auto
+REDENCE_VISION_ENABLED=true

@@ -1,0 +1,35 @@
+# Browser/runtime dependencies. ML training/serving also needs train/requirements.txt.
+#
+# Install:
+#   python -m venv env
+#   source env/bin/activate
+#   pip install -r requirements.txt
+#   playwright install chromium    # or: playwright install chrome
+#
+# System tools (not installed via pip):
+#   - ffmpeg  (pydub audio conversion for reCAPTCHA audio challenges)
+#   - Ollama  (local LLM server for the agent; set OLLAMA_HOST if remote)
+#
+# Do NOT pip install selenium-captcha-processing — the repo vendors a Playwright
+# fork under /agent/ that is loaded as selenium_captcha_processing.
+
+# Browser tools and WHOIS intelligence
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+playwright>=1.40.0
+python-whois>=0.9.4
+
+# Archive screenshots → JPEG for agent vision (archive_screenshot.py)
+Pillow>=10.0.0
+
+# Load redence/.env automatically (a standard-library fallback is included)
+python-dotenv>=1.0.0
+
+# Agent (browser_agent.py)
+ollama>=0.3.0
+ddgs>=6.0.0
+
+# Agent captcha solver (agent/ local package)
+SpeechRecognition>=3.10.0
+pydub>=0.25.0
+

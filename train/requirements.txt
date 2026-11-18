@@ -1,0 +1,8 @@
+# CUDA training and local adapter serving. Python 3.11+ recommended.
+torch>=2.6
+transformers>=5.2,<6
+peft>=0.18,<1
+accelerate>=1.4,<2
+datasets>=3,<5
+bitsandbytes>=0.45,<1
+Pillow>=10
